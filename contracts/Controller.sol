@@ -455,8 +455,7 @@ contract Controller is Initializable, UUPSUpgradeable, OwnableUpgradeable {
 
         // Anyone other than Proposal Contract can't withdraw tokens if vest time has not passed.
         require(
-            _caller == Master(masterContract).getProposal() ||
-                vestingTimeOfTokenId[_wrappedTokenAddress] <= block.timestamp,
+            vestingTimeOfTokenId[_wrappedTokenAddress] <= block.timestamp,
             "Cannot withdraw before vest time"
         );
 
