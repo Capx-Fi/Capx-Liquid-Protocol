@@ -16,7 +16,7 @@ abstract contract ERC20Clone {
 
 pragma solidity 0.8.4;
 
-/// @title ERC20Factory contract for mass deployment of derivatives
+/// @title ERC20Factory contract for mass deployment of WVTs
 /// @author Capx Team
 /// @notice Only the controller contract can call the function which deploys cheap copy of ERC20 contracts
 /// @dev This contract uses EIP-1167: Minimal Proxy Contract

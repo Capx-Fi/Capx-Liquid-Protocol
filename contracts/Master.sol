@@ -277,10 +277,10 @@ contract Master is Initializable, UUPSUpgradeable, OwnableUpgradeable {
         );
     }
 
-    /// @notice Using this function a user can swap derivative tokens for underlying asset after the vest time has passed
+    /// @notice Using this function a user can swap WVT tokens for underlying asset after the vest time has passed
     /// @dev Calls LiquidController's withdrawToken function
     /// @param _wrappedTokenAddress Address of the wrapped asset
-    /// @param _amount Amount of derivative tokens user wants to swap for underlying asset
+    /// @param _amount Amount of WVT tokens user wants to swap for underlying asset
     function withdrawWrappedVestingToken(
         address _wrappedTokenAddress,
         uint256 _amount

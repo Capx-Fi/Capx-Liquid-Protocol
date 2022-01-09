@@ -212,7 +212,7 @@ Inputs required
 * `_name` - Name of the project
 * `_documentHash` - IPFS hash of the project description
 * `_tokenAddress` - The ERC20 asset the user wants to vest
-* `_amount` - Array of size 2 with total amount of ERC20 tokens the user wants to create derivatives of and to lock without derivatives
+* `_amount` - Array of size 2 with total amount of ERC20 tokens the user wants to create WVTs of and to lock without WVTs
 * `_liquid_distAddress` - The addresses to whom the derived assets need to be distributed to
 * `_liquid_distTime` - The time till which the tokens need to be vested for each particular `_liquid_distAddress`
 * `_liquid_distAmount` - The amount of derived assets to be distributed to each `_liquid_distAddress`

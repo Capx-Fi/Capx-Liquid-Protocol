@@ -23,7 +23,7 @@ Structs
 -------------
 
 * `struct derivativePair`:<br />
-  &ensp;&nbsp;&nbsp;&nbsp;&nbsp;  Signifies the structure of a derivative pair.
+  &ensp;&nbsp;&nbsp;&nbsp;&nbsp;  Signifies the structure of a WVT pair.
 ```solidity
 struct derivativePair { 
         address sellable;
@@ -55,7 +55,7 @@ Variables
   &ensp;&nbsp;&nbsp;&nbsp;&nbsp; Vesting Schedule of corresponding ERC20 Token.
 
 * ` mapping(address => uint256) public totalDerivativeForAsset`:<br />
-  &ensp;&nbsp;&nbsp;&nbsp;&nbsp; Mapping of total Derivatives created for an Asset.
+  &ensp;&nbsp;&nbsp;&nbsp;&nbsp; Mapping of total WVTs created for an Asset.
 
 * `mapping(address => address) public assetAddresstoProjectOwner`:<br />
   &ensp;&nbsp;&nbsp;&nbsp;&nbsp; Mapping of Asset address to the corresponding project owner.
@@ -303,7 +303,7 @@ Inputs required
 * `_transferable` - The new deployed ERC20 is sellable or not
 
 Functionality  
-* The function fetches the tokenName, tokenTicker, tokenDecimals of the `_tokenAddress` and then instructs the factory contract to deploy a new copy of ERC20 contract with the naming convention of `<DateOfExpiry>.<TokenName>-<typeOfToken>` and symbol of `<DateOfExpiry>.<TokenSymbol>` and decimal equal to `<TokenDecimal>-<typeOfToken>`. If the newly deployed derivative is sellable then it can be transferred from one wallet to another before the vest time, else it cannot be transferred from one wallet to another.
+* The function fetches the tokenName, tokenTicker, tokenDecimals of the `_tokenAddress` and then instructs the factory contract to deploy a new copy of ERC20 contract with the naming convention of `<DateOfExpiry>.<TokenName>-<typeOfToken>` and symbol of `<DateOfExpiry>.<TokenSymbol>` and decimal equal to `<TokenDecimal>-<typeOfToken>`. If the newly deployed WVT is sellable then it can be transferred from one wallet to another before the vest time, else it cannot be transferred from one wallet to another.
 
 ### _mintWrappedTokens
 
@@ -318,7 +318,7 @@ function _mintWrappedTokens(
 *Internal function which is used by* `createBulkDerivative` *function*  
    
 Inputs required 
-* `_tokenAddress` - Token address for which a derivative is being minted
+* `_tokenAddress` - Token address for which a WVT is being minted
 * `_distributionAddress` - The address to whom derived token is to be minted
 * `_distributionAmount` - The amount of derived assets to be minted
 * `_wrappedTokenAddress` - The address of the derived asset which is to be minted

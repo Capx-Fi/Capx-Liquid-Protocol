@@ -45,7 +45,7 @@ interface AbsERC20Factory {
 
 pragma solidity 0.8.4;
 
-/// @title Controller contract for creating derivative tokens
+/// @title Controller contract for creating WVTs
 /// @author Capx Team
 /// @notice User can interact with the Controller contract only through Master contract.
 /// @dev This contract uses openzepplin Upgradable plugin. https://docs.openzeppelin.com/upgrades-plugins/1.x/
@@ -120,12 +120,12 @@ contract Controller is Initializable, UUPSUpgradeable, OwnableUpgradeable {
         require(_killed != _ACTIVE, "FailSafeMode: ACTIVE");
     }
 
-    /// @notice Disables the derivative Creation & Withdraw functionality of the contract.
+    /// @notice Disables the WVT Creation & Withdraw functionality of the contract.
     function kill() external onlyOwner {
         _killed = _ACTIVE;
     }
 
-    /// @notice Enables the derivative Creation & Withdraw functionality of the contract.
+    /// @notice Enables the WVT Creation & Withdraw functionality of the contract.
     function revive() external onlyOwner {
         _killed = _INACTIVE;
     }
@@ -269,8 +269,8 @@ contract Controller is Initializable, UUPSUpgradeable, OwnableUpgradeable {
 
     /// @notice Helper function to update the mappings.
     /// @dev Updates the global state variables.
-    /// @param _wrappedTokenAdr Address of the derivative to be updated.
-    /// @param _tokenAddress Address of the Project Token of which the derivative is created.
+    /// @param _wrappedTokenAdr Address of the WVT to be updated.
+    /// @param _tokenAddress Address of the Project Token of which the WVT is created.
     /// @param _vestTime Time of unlock of the project token.
     /// @param _transferable Boolean to determine if this asset is sellable or not.
     function _updateMappings(
@@ -320,7 +320,7 @@ contract Controller is Initializable, UUPSUpgradeable, OwnableUpgradeable {
 
     /// @notice Function called by createBulkDerivative to spawn new cheap copies which make delegate call to ERC20 Model Contract
     /// @dev Uses the AbsERC20Factory interface object to call createStorage method of the factory contract
-    /// @param _tokenAddress Token address for which a derivative is being created
+    /// @param _tokenAddress Token address for which a WVT is being created
     /// @param _vestTime The timestamp after which the token deployed can be exchanged for the project token
     /// @param _transferable The new deployed ERC20 is sellable or not
     /// @return Returns a tupple of address which contains the address of newly deployed ERC20 contract and its token ticker
@@ -399,7 +399,7 @@ contract Controller is Initializable, UUPSUpgradeable, OwnableUpgradeable {
 
     /// @notice Function called by createBulkDerivative to mint new Derived tokens.
     /// @dev Uses the ERC20Clone interface object to instruct derived asset to mint new tokens.
-    /// @param _tokenAddress Token address for which a derivative is being minted
+    /// @param _tokenAddress Token address for which a WVT is being minted
     /// @param _distributionAddress The address to whom derived token is to be minted.
     /// @param _distributionAmount The amount of derived assets to be minted.
     /// @param _wrappedTokenAddress The address of the derived asset which is to be minted.

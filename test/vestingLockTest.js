@@ -1,14 +1,14 @@
 const Controller = artifacts.require("Controller");
 const Master = artifacts.require("Master");
 const Vest = artifacts.require("Vesting");
-const helper = require('./../utils');
+const helper = require('../utils');
 const { upgradeProxy } = require('@openzeppelin/truffle-upgrades');
 const web3 = require("web3");
 const ERC20test = artifacts.require("ERC20Test");
 
 
 
-contract('Vesting Test', (accounts) => {
+contract('Testing Vesting Lock', (accounts) => {
     var testERC20;
     var masterInstance;
     var vestingInstance;
@@ -264,17 +264,6 @@ let lockIDs = await vestingInstance.lockId().then((response)=>{
         }
         await masterInstance.transferVestingLock("2",accounts[0],{from:accounts[3]});
     });
-
-//     it('Upgrade Works', async () => {
-//         try {
-//             const controllerInstance = await Controller.deployed();
-            
-//             const controller2 = await upgradeProxy(controllerInstance.address, Controller2);
-//         } catch (error) {
-//             await console.log(error.message)
-//         }
-    
-//       });
 
 it('Withdraw tokens after time forward',async() => {
         

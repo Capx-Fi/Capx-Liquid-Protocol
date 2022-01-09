@@ -1,4 +1,4 @@
-Vesting - Derivative Asset Creation 
+Vesting - WVT Asset Creation 
 ====================================
 
 The project provides a decentralized platform allowing token creators, developers and token holders to create a "*Smart Vesting Contract*" to hold their ERC20 Tokens for a specific period of time and provide them with a wrapped ERC20 Token derived from the locked token depending on the user's choice.<br />

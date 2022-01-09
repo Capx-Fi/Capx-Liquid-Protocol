@@ -1,13 +1,13 @@
 const Controller = artifacts.require("Controller");
 const Master = artifacts.require("Master");
-const helper = require('./../utils');
+const helper = require('../utils');
 const { upgradeProxy } = require('@openzeppelin/truffle-upgrades');
 const web3 = require("web3");
 const ERC20test = artifacts.require("ERC20Test");
 
 
 
-contract('Vesting Test', (accounts) => {
+contract('Testing Sellable Liquid Tokens', (accounts) => {
     var testERC20;
     var masterInstance;
 
@@ -206,7 +206,7 @@ var a5 = []
     });
 
 
-    it('Vesting tokens - 24 new derivatives',async() => {
+    it('Vesting tokens - 24 new WVTs',async() => {
 
         var a1 = []
         var a2 = []
@@ -291,22 +291,12 @@ var a5 = []
 var a6 = []
 var a7 = []
         await masterInstance.createBulkDerivative("name","QmVcrjMQVhdCEnmCs78x4MaiLSBgnvygaXLT5nH9YFsvi7",erc20.address,["700","0"],a1,a2,a3,a4,a5,a6,a7,{from: accounts[0]});
-        // await controllerInstance.lastVestID().then(function(response) { assert(response.toString(10)==="3") })
         
     });
 
-    // it('Upgrade Works', async () => {
-    //     try {
-    //         const controllerInstance = await Controller.deployed();
-            
-    //         const controller2 = await upgradeProxy(controllerInstance.address, Controller2);
-    //     } catch (error) {
-    //         await console.log(error.message)
-    //     }
-    
-    //   });
+   
 
-    it('Derivative Creation',async() => {
+    it('WVT Creation',async() => {
 
         const controllerInstance = await Controller.deployed();
         let derivedAssetAddress1 = await controllerInstance.derivativeIDtoAddress("1").then(function(response) { return(response.toString(10)) })
@@ -323,7 +313,7 @@ var a7 = []
 
     });
 
-    it('Derivative Holders',async() => {
+    it('WVT Holders',async() => {
 
         const controllerInstance = await Controller.deployed();
         let derivedAssetAddress1 = await controllerInstance.derivativeIDtoAddress("1").then(function(response) { return(response.toString(10)) })
@@ -346,7 +336,7 @@ var a7 = []
 
     
 
-    it('Transfer derivative Holders',async() => {
+    it('Transfer WVT Holders',async() => {
 
         const controllerInstance = await Controller.deployed();
         let derivedAssetAddress1 = await controllerInstance.derivativeIDtoAddress("1").then(function(response) { return(response.toString(10)) })
@@ -454,11 +444,10 @@ var a5 = []
 var a6 = []
 var a7 = []
         await masterInstance.createBulkDerivative("name","QmVcrjMQVhdCEnmCs78x4MaiLSBgnvygaXLT5nH9YFsvi7",erc20.address,["600","0"],a1,a2,a3,a4,a5,a6,a7,{from: accounts[0]});
-        // await controllerInstance.lastVestID().then(function(response) { assert(response.toString(10)==="3") })
         
     });
 
-    it('Increase in Derivative Holders balance after vesting',async() => {
+    it('Increase in WVT Holders balance after vesting',async() => {
 
         const controllerInstance = await Controller.deployed();
         let derivedAssetAddress1 = await controllerInstance.derivativeIDtoAddress("1").then(function(response) { return(response.toString(10)) })
@@ -497,7 +486,6 @@ await a4.push(true)
         var a6 = []
         var a7 = []
         await masterInstance.createBulkDerivative("name","QmVcrjMQVhdCEnmCs78x4MaiLSBgnvygaXLT5nH9YFsvi7",erc20.address,["600","0"],a1,a2,a3,a4,a5,a6,a7,{from: accounts[0]});
-        // await controllerInstance.lastVestID().then(function(response) { assert(response.toString(10))=="9" })
         
     });
 
@@ -523,7 +511,6 @@ await a4.push(true)
         var a6 = []
         var a7 = []
         await masterInstance.createBulkDerivative("name","QmVcrjMQVhdCEnmCs78x4MaiLSBgnvygaXLT5nH9YFsvi7",erc20.address,["1000","0"],a1,a2,a3,a4,a5,a6,a7,{from: accounts[0]});
-        // await controllerInstance.lastVestID().then(function(response) { assert(response.toString(10))=="10" })
         
     });
 
@@ -716,7 +703,6 @@ var a6 = []
 var a7 = []
             
         await masterInstance.createBulkDerivative("name","QmVcrjMQVhdCEnmCs78x4MaiLSBgnvygaXLT5nH9YFsvi7",wrappedAssetToken.address,["100","0"],a1,a2,a3,a4,a5,a6,a7,{from: accounts[0]});
-        // await controllerInstance.lastVestID().then(function(response) { assert(response.toString(10)=="19") })
         
     });
 
@@ -783,7 +769,6 @@ await a4.push(true)
         var a6 = []
         var a7 = []
         await masterInstance.createBulkDerivative("name","QmVcrjMQVhdCEnmCs78x4MaiLSBgnvygaXLT5nH9YFsvi7",erc20.address,["600","0"],a1,a2,a3,a4,a5,a6,a7,{from: accounts[0]});
-        // await controllerInstance.lastVestID().then(function(response) { assert(response.toString(10))=="24"})
         
     });
     it('Vesting and creating 6 assets for next 6 months',async() => {
@@ -807,7 +792,6 @@ await a4.push(true)
         var a6 = []
         var a7 = []
         await masterInstance.createBulkDerivative("name","QmVcrjMQVhdCEnmCs78x4MaiLSBgnvygaXLT5nH9YFsvi7",erc20.address,["600","0"],a1,a2,a3,a4,a5,a6,a7,{from: accounts[0]});
-        // await controllerInstance.lastVestID().then(function(response) { assert(response.toString(10))=="30"})
         
     });
 
@@ -929,7 +913,7 @@ await a4.push(true)
         }
         
         wrappedAssetToken.balanceOf(accounts[3]).then(function(response) { assert(response.toString(10)=="100") })
-        advancement = 86400 * 730 // 1 year
+        advancement = 86400 * 730 // 2 year
         await helper.advanceTimeAndBlock(advancement);
 
         await actualAssetToken.balanceOf(accounts[3]).then(function(response) { assert(response.toString(10)=="0") })
