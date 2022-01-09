@@ -5,3 +5,4 @@ secrets.json
 /coverage
 /.openzeppelin
 coverage.json
+.DS_Store
