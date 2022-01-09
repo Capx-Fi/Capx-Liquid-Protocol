@@ -6,18 +6,6 @@ This creates trust in the token community and prevents spams and '*rug pulls*'. 
 
 >**Vesting** definition - *In law, vesting is the point in time when the rights and interests arising from legal ownership of a property is acquired by some person.*
 
-Concerning Issues
--------------------
-
-* `Creation of Wrapped Assets` Deployment of a new ERC20 Token (wrapped asset) is high & expensive.
-* `Tracking of Wrapped Asset` As the derived assets are being transferred the data should be consistent w.r.t the holder of the wrapped assets.
-
-Solution
--------------------
-
-* `Creation of Wrapped Assets` - To reduce the cost of Deployment of the new ERC20 Token, [EIP-1167 Standard](https://eips.ethereum.org/EIPS/eip-1167) standard is used. The tokens created using **EIP-1167 Standard** are fully functional ERC20 Tokens.
-* `Tracking of Wrapped Asset` - Using **Events** to handle this.
-
 Architecture
 -------------------
 
