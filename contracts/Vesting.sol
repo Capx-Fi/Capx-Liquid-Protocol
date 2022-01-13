@@ -51,6 +51,7 @@ contract Vesting is Initializable, UUPSUpgradeable, OwnableUpgradeable {
     );
 
     event TransferLock(
+        uint256 vestID,
         address userAddress,
         address indexed wrappedTokenAddress,
         address receiverAddress,
@@ -59,6 +60,7 @@ contract Vesting is Initializable, UUPSUpgradeable, OwnableUpgradeable {
     );
 
     event Withdraw(
+        uint256 vestID,
         address indexed userAddress,
         uint256 amount,
         address wrappedTokenAddress,
@@ -230,6 +232,7 @@ contract Vesting is Initializable, UUPSUpgradeable, OwnableUpgradeable {
             lockedToken[_id].tokenAmount;
 
         emit TransferLock(
+            _id,
             _caller,
             lockedToken[_id].tokenAddress,
             _receiverAddress,
@@ -272,6 +275,7 @@ contract Vesting is Initializable, UUPSUpgradeable, OwnableUpgradeable {
             lockedToken[_id].tokenAmount;
 
         emit Withdraw(
+            _id,
             _caller,
             lockedToken[_id].tokenAmount,
             lockedToken[_id].tokenAddress,
