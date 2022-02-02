@@ -62,38 +62,6 @@ module.exports = {
         // from: <address>,        // Account to send txs from (default: accounts[0])
         // websocket: true        // Enable EventEmitter interface for web3 (default: false)
         // },
-        kovan: {
-            provider: () => new HDWalletProvider(mnemonic, `https://kovan.infura.io/v3/YOUR_TOKEN`),
-            network_id: 42, // Ropsten's id
-            gas: 5500000, // Ropsten has a lower block limit than mainnet
-            confirmations: 7, // # of confs to wait between deployments. (default: 0)
-            timeoutBlocks: 200, // # of blocks before a deployment times out  (minimum/default: 50)
-            skipDryRun: true // Skip dry run before migrations? (default: false for public nets )
-        },
-        rinkbey: {
-            provider: () => new HDWalletProvider(mnemonic, `https://rinkeby.infura.io/v3/YOUR_TOKEN`),
-            network_id: 4, // Ropsten's id
-            gas: 20000000, // Ropsten has a lower block limit than mainnet
-            confirmations: 0, // # of confs to wait between deployments. (default: 0)
-            timeoutBlocks: 200, // # of blocks before a deployment times out  (minimum/default: 50)
-            skipDryRun: true // Skip dry run before migrations? (default: false for public nets )
-        },
-        neonDev: {
-            provider: () => new HDWalletProvider(mnemonic, `https://proxy.devnet.neonlabs.org/solana`),
-            network_id: 1600243666737, // Ropsten's id
-            gas: 5500000, // Ropsten has a lower block limit than mainnet
-            confirmations: 0, // # of confs to wait between deployments. (default: 0)
-            timeoutBlocks: 200, // # of blocks before a deployment times out  (minimum/default: 50)
-            skipDryRun: true // Skip dry run before migrations? (default: false for public nets )
-        },
-        neonTest: {
-            provider: () => new HDWalletProvider(mnemonic, `https://proxy.testnet.neonlabs.org/solana`),
-            network_id: 1600243666737, // Ropsten's id
-            gas: 5500000, // Ropsten has a lower block limit than mainnet
-            confirmations: 0, // # of confs to wait between deployments. (default: 0)
-            timeoutBlocks: 200, // # of blocks before a deployment times out  (minimum/default: 50)
-            skipDryRun: true // Skip dry run before migrations? (default: false for public nets )
-        },
         // Useful for deploying to a public network.
         // NB: It's important to wrap the provider as a function.
         // ropsten: {

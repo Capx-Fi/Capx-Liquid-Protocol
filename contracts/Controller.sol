@@ -337,18 +337,17 @@ contract Controller is Initializable, UUPSUpgradeable, OwnableUpgradeable {
         if (_transferable) {
             _wrappedTokenTicker = string(
                 abi.encodePacked(
-                    date,
-                    ".",
                     ERC20Properties(_tokenAddress).symbol(),
-                    "-S"
+                    ".",
+                    date
+                    
                 )
             );
             string memory wrappedTokenName = string(
                 abi.encodePacked(
-                    date,
-                    ".",
                     ERC20Properties(_tokenAddress).name(),
-                    "-S"
+                    ".",
+                    date
                 )
             );
             uint8 wrappedTokenDecimals = ERC20Properties(_tokenAddress)
@@ -365,18 +364,18 @@ contract Controller is Initializable, UUPSUpgradeable, OwnableUpgradeable {
         } else {
             _wrappedTokenTicker = string(
                 abi.encodePacked(
-                    date,
-                    ".",
                     ERC20Properties(_tokenAddress).symbol(),
-                    "-NS"
+                    ".",
+                   date,
+                    "-NT"
                 )
             );
             string memory wrappedTokenName = string(
                 abi.encodePacked(
-                    date,
-                    ".",
                     ERC20Properties(_tokenAddress).name(),
-                    "-NS"
+                    ".",
+                    date,
+                    "-NT"
                 )
             );
             uint8 wrappedTokenDecimals = ERC20Properties(_tokenAddress)

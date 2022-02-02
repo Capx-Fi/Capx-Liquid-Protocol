@@ -5,6 +5,7 @@ const { upgradeProxy } = require('@openzeppelin/truffle-upgrades');
 const web3 = require("web3");
 const ERC20test = artifacts.require("ERC20Test");
 
+const Controller2 = artifacts.require("Controller2");
 
 
 contract('Testing Sellable Liquid Tokens', (accounts) => {
@@ -306,9 +307,9 @@ var a7 = []
         const derivedAsset1 = await ERC20test.at(derivedAssetAddress1);
         const derivedAsset2 = await ERC20test.at(derivedAssetAddress2);
         const derivedAsset3 = await ERC20test.at(derivedAssetAddress3);
-        await derivedAsset1.name().then(function(response){ assert(response.toString(10)==="25Oct2022.TET-S")})
-        await derivedAsset2.name().then(function(response){ assert(response.toString(10)==="26Oct2022.TET-S")})
-        await derivedAsset3.name().then(function(response){ assert(response.toString(10)==="27Oct2022.TET-S")})
+        await derivedAsset1.name().then(function(response){ assert(response.toString(10)==="TET.25Oct2022")})
+        await derivedAsset2.name().then(function(response){ assert(response.toString(10)==="TET.26Oct2022")})
+        await derivedAsset3.name().then(function(response){ assert(response.toString(10)==="TET.27Oct2022")})
         
 
     });
@@ -944,7 +945,5 @@ await a4.push(true)
             await assert(error.message.includes("Controller already set"));
         }
     })
-    
-   
 
 });

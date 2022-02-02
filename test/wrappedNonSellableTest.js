@@ -306,9 +306,9 @@ var a7 = []
         const derivedAsset1 = await ERC20test.at(derivedAssetAddress1);
         const derivedAsset2 = await ERC20test.at(derivedAssetAddress2);
         const derivedAsset3 = await ERC20test.at(derivedAssetAddress3);
-        await derivedAsset1.name().then(function(response){ assert(response.toString(10)==="25Oct2022.TET-NS")})
-        await derivedAsset2.name().then(function(response){ assert(response.toString(10)==="26Oct2022.TET-NS")})
-        await derivedAsset3.name().then(function(response){ assert(response.toString(10)==="27Oct2022.TET-NS")})
+        await derivedAsset1.name().then(function(response){ assert(response.toString(10)==="TET.25Oct2022-NT")})
+        await derivedAsset2.name().then(function(response){ assert(response.toString(10)==="TET.26Oct2022-NT")})
+        await derivedAsset3.name().then(function(response){ assert(response.toString(10)==="TET.27Oct2022-NT")})
         
 
     });
