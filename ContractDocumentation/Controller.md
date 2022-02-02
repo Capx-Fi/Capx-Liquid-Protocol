@@ -303,7 +303,8 @@ Inputs required
 * `_transferable` - The new deployed ERC20 is sellable or not
 
 Functionality  
-* The function fetches the tokenName, tokenTicker, tokenDecimals of the `_tokenAddress` and then instructs the factory contract to deploy a new copy of ERC20 contract with the naming convention of `<DateOfExpiry>.<TokenName>-<typeOfToken>` and symbol of `<DateOfExpiry>.<TokenSymbol>` and decimal equal to `<TokenDecimal>-<typeOfToken>`. If the newly deployed WVT is sellable then it can be transferred from one wallet to another before the vest time, else it cannot be transferred from one wallet to another.
+* The function fetches the tokenName, tokenTicker, tokenDecimals of the `_tokenAddress` and then instructs the factory contract to deploy a new copy of ERC20 contract with the naming convention of `<TokenName>.<DateOfExpiry>-<typeOfToken>` and symbol of `<TokenSymbol>.<DateOfExpiry>-<typeOfToken>` and decimal equal to `<TokenDecimal>`. `<typeOfToken>` only occurs as `NT` if the token is non sellable(tradable). If the token is sellable(tradable)  then the naming convention has no `<typeOfToken>`.
+* If the newly deployed WVT is sellable then it can be transferred from one wallet to another before the vest time, else it cannot be transferred from one wallet to another.
 
 ### _mintWrappedTokens
 

@@ -117,7 +117,8 @@ For more details see [Master.md](./ContractDocumentation/Master.md)
 
 ### Controller/ Escrow Contract
 
-The Controller/ Escrow Contract provides the functionality of creating vesting schedules, every wrapped asset created will follow the naming convention of `<DateOfExpiry>.<TokenName>-<typeOfToken>` and symbol of `<DateOfExpiry>.<TokenSymbol>-<typeOfToken>`. <br />
+The Controller/ Escrow Contract provides the functionality of creating vesting schedules, every wrapped asset created will follow the naming convention of `<TokenName>.<DateOfExpiry>-<typeOfToken>` and symbol of `<TokenSymbol>.<DateOfExpiry>-<typeOfToken>`. <br />
+`<typeOfToken>` only occurs as `NT` if the token is non tradable. If the token is tradable  then the naming convention has no `<typeOfToken>`.
 The Controller/ Escrow Contract mints the wrapped assets for the end-user.
 For more details see [Controller.md](./ContractDocumentation/Controller.md)
 
