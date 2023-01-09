@@ -107,6 +107,72 @@ await vestingInstance.setMaster(masterInstance.address);
 ### Run Migrate to deploy the contracts.
 > truffle migrate
 
+
+## Contract Address
+
+#### Ethereum 
+| Contract Name     | Contract Addresss  |
+|---------------------|--------------------------------------------------------------------|
+| Master      | [0xd297b094607DE535378000Fa6fc45e71627Fc839](https://etherscan.io/address/0xd297b094607DE535378000Fa6fc45e71627Fc839)	 |
+| Controller  | [0x30B9A8279298Ba8d37Bf76b9f2A805D656fC1C07](https://etherscan.io/address/0x30B9A8279298Ba8d37Bf76b9f2A805D656fC1C07)	 |
+| Vesting     | [0x5d985753aE3691a0A94d38eC2F12793006097416](https://etherscan.io/address/0x5d985753aE3691a0A94d38eC2F12793006097416)	 |
+
+#### Binance Smart Chain (BSC) 
+| Contract Name     | Contract Addresss  |
+|---------------------|--------------------------------------------------------------------|
+| Master      | [0x30B9A8279298Ba8d37Bf76b9f2A805D656fC1C07](https://bscscan.com/address/0x30B9A8279298Ba8d37Bf76b9f2A805D656fC1C07)	 |
+| Controller  | [0x316717ecEff2D3a612Deba49B5A21430c78D22f2](https://bscscan.com/address/0x316717ecEff2D3a612Deba49B5A21430c78D22f2)	 |
+| Vesting     | [0x1428c7f929b3Ac5d5c6619FC3F9C722d2cfC66A5](https://bscscan.com/address/0x1428c7f929b3Ac5d5c6619FC3F9C722d2cfC66A5)	 |
+
+#### Matic (Polygon)
+| Contract Name     | Contract Addresss  |
+|---------------------|--------------------------------------------------------------------|
+| Master      | [0xd297b094607DE535378000Fa6fc45e71627Fc839](https://polygonscan.com/address/0xd297b094607DE535378000Fa6fc45e71627Fc839)	 |
+| Controller  | [0x30B9A8279298Ba8d37Bf76b9f2A805D656fC1C07](https://polygonscan.com/address/0x30B9A8279298Ba8d37Bf76b9f2A805D656fC1C07)	 |
+| Vesting     | [0x5d985753aE3691a0A94d38eC2F12793006097416](https://polygonscan.com/address/0x5d985753aE3691a0A94d38eC2F12793006097416)	 |
+
+#### Avalanche 
+| Contract Name     | Contract Addresss  |
+|---------------------|--------------------------------------------------------------------|
+| Master      | [0xd297b094607DE535378000Fa6fc45e71627Fc839](https://snowtrace.io/address/0xd297b094607DE535378000Fa6fc45e71627Fc839)	 |
+| Controller  | [0x30B9A8279298Ba8d37Bf76b9f2A805D656fC1C07](https://snowtrace.io/address/0x30B9A8279298Ba8d37Bf76b9f2A805D656fC1C07)	 |
+| Vesting     | [0x5d985753aE3691a0A94d38eC2F12793006097416](https://snowtrace.io/address/0x5d985753aE3691a0A94d38eC2F12793006097416)	 |
+
+#### Fantom 
+| Contract Name     | Contract Addresss  |
+|---------------------|--------------------------------------------------------------------|
+| Master      | [0xd297b094607DE535378000Fa6fc45e71627Fc839](https://ftmscan.com/address/0xd297b094607DE535378000Fa6fc45e71627Fc839)	 |
+| Controller  | [0x30B9A8279298Ba8d37Bf76b9f2A805D656fC1C07](https://ftmscan.com/address/0x30B9A8279298Ba8d37Bf76b9f2A805D656fC1C07)	 |
+| Vesting     | [0x5d985753aE3691a0A94d38eC2F12793006097416](https://ftmscan.com/address/0x5d985753aE3691a0A94d38eC2F12793006097416)	 |
+
+
+## SubGraph Query URLs
+
+#### Ethereum 
+| Subgraph     | Query URL  |
+|---------------------|--------------------------------------------------------------------|
+| Liquid Subgraph     | https://api.thegraph.com/subgraphs/name/capxdev/capx-liquid-eth   |
+
+#### Binance Smart Chain (BSC) 
+| Subgraph     | Query URL  |
+|---------------------|--------------------------------------------------------------------|
+| Liquid Subgraph     | https://api.thegraph.com/subgraphs/name/capxdev/capx-liquid-bsc   |
+
+#### Matic (Polygon)
+| Subgraph     | Query URL  |
+|---------------------|--------------------------------------------------------------------|
+| Liquid Subgraph     | https://api.thegraph.com/subgraphs/name/capxdev/capx-liquid-matic   |
+
+#### Avalanche 
+| Subgraph     | Query URL  |
+|---------------------|--------------------------------------------------------------------|
+| Liquid Subgraph     | https://api.thegraph.com/subgraphs/name/capxdev/capx-liquid-avax   |
+
+#### Fantom 
+| Subgraph     | Query URL  |
+|---------------------|--------------------------------------------------------------------|
+| Liquid Subgraph     | https://api.thegraph.com/subgraphs/name/capxdev/capx-liquid-ftm   |
+
 Implementation Details 
 ======================
 
